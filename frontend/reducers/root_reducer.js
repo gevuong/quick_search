@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import campgrounds from './campground_reducer';
 
 const rootReducer = combineReducers({
-    campgrounds, // syntactic sugar for campgrounds: campgroundsReducer
+    campgrounds,
 });
 
 export default rootReducer;

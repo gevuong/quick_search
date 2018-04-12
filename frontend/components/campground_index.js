@@ -18,8 +18,6 @@ class ThingsIndex extends Component {
         ThingsIndex.propTypes = {
             campgrounds: PropTypes.shape({
                 name: PropTypes.string,
-                description: PropTypes.string,
-                image_url: PropTypes.string,
             }),
             requestAllCampgrounds: PropTypes.func.isRequired,
         }
@@ -58,7 +56,6 @@ class ThingsIndex extends Component {
     onSubmit(e) {
         e.preventDefault();
         if (e.target.textContent.length === 0) {
-            // console.log("onSubmit do nothing");
             return;
         }
     };
@@ -95,11 +92,11 @@ class ThingsIndex extends Component {
         return matches;
     }
 
+    // calculate startPage and endPage based on totalPages. The following code modifies number of pages to render when traversing PaginationBar.
     findStartAndEndPage(totalPages) {
         let startPage, endPage;
         const { currentPage } = this.state;
 
-        // calculate startPage and endPage based on totalPages. The following code modifies number of pages to render when traversing PaginationBar.
         if (totalPages <= 3) {
             startPage = 1;
             endPage = totalPages;
@@ -127,20 +124,15 @@ class ThingsIndex extends Component {
         const { campgrounds } = this.props;
         const { rowsPerPage, currentPage } = this.state;
 
-        // console.log("props: ", this.props);
-        // console.log("state: ", this.state);
-
         const searchResults = this.findMatches().sort((a, b) => {
             a = a.toLowerCase();
             b = b.toLowerCase();
             if (a === b) return 0;
             if (a > b) return 1; // meaning, b comes before a. convert character to ASCII and then makes comparison. So if ("z" > "d"), which is true, return 1, meaning "a" comes before "z".
-            return -1; // meaning a comes before b.
+            return -1;
         });
 
         const uniqSearchResults = Array.from(new Set(searchResults));
-
-        // console.log("uniqSearchResults: ", uniqSearchResults);
 
         // need prevPage in order to determine initial index of slice(). if currentPage is 1 (default), then prevPage is 0, which equates to an idx of 0
         const prevPage = currentPage - 1;
@@ -259,13 +251,3 @@ class ThingsIndex extends Component {
 }
 
 export default ThingsIndex;
-
-// <div className="campground-container">
-//     <div>
-//         <img className="campground-img" src="https://res.cloudinary.com/dtluc0y85/image/upload/v1523306878/header_humzpt.jpg" />
-//     </div>
-//
-//     <div className="campground-info">
-//         <p>{ campground }</p>
-//     </div>
-// </div>

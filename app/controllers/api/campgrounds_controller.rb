@@ -3,7 +3,6 @@ class Api::CampgroundsController < ApplicationController
         nps = Api::Fetch.new
         if nps
             @nps_campgrounds = nps.campgrounds
-            # render json: @nps_campgrounds #<= for testing
             render :index
         else
             render json: nps.errors.full_messages

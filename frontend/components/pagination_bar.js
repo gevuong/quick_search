@@ -33,7 +33,7 @@ class PaginationBar extends Component {
         // render() will reset pageNumbers to an empty array
         const pageNumbers = [];
         for (let page = startPage; page <= endPage; page++) {
-            pageNumbers.push(page); // array of page numbers
+            pageNumbers.push(page);
         }
 
         const renderPageNumbers = pageNumbers.map(page => {

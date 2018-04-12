@@ -1,7 +1,7 @@
 import merge from 'lodash/merge';
 import { RECEIVE_ALL_CAMPGROUNDS } from '../actions/campground_actions';
 
-// reducer must never mutate previus state. Instead, return a new array or object with the necessary changes.
+// return a new array or object with the necessary changes rather than mutate previous state.
 const campgroundsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch(action.type) {
