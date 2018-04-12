@@ -5,6 +5,6 @@ Rails.application.routes.draw do
 
     # Each API endpoint encapsulates a single controller action your app can take. Creating a resource creates a new searches instance that can perform CRUD actions. RESTful design patterns.
     namespace :api, defaults: { format: :json } do
-        resources :fetches, only: [:index]
+        resources :campgrounds, only: [:index]
     end
 end

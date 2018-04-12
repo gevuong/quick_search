@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::FetchesControllerTest < ActionDispatch::IntegrationTest
+class Api::CampgroundsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
