@@ -3,10 +3,10 @@ class Api::FetchesController < ApplicationController
         nps = Api::Fetch.new
         if nps
             @nps_campgrounds = nps.campgrounds
-            # render json: @nps_campgrounds
+            # render json: @nps_campgrounds <= for testing
             render :index
         else
-            render json: nps.errors.full_messages # ["429 status code: Too many requests in the past hour"]
+            render json: nps.errors.full_messages
         end
     end
 end
