@@ -1,24 +1,33 @@
 # README
+A responsive (phone, tablet, desktop) web application that allows the user to quick filter a list of campgrounds. I used National Park Service's open public API to pull campground-related data. The top of the page has a search input field and below that, there are a list of campgrounds in response to the filter. The campgrounds are sorted alphabetically, are unique, and I removed any names with less than 3 characters.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### For more info on the open public API.
+[API Documentation](https://www.nps.gov/subjects/developer/api-documentation.htm#/campgrounds/getCampgrounds)
 
-Things you may want to cover:
+Limit with API key is 1000 requests/hr.
 
-* Ruby version
+### Primary technologies and libraries used
+- Ruby on Rails, jbuilder, HTTParty
+- PostgreSQL,
+- React w/ Redux, jquery
 
-* System dependencies
 
-* Configuration
+### Features & Implementation
+- Used HTTParty to make server-side GET request to NPS's open public API.
+- AJAX pulled from a Rails backend service
 
-* Database creation
+- quick search filter
 
-* Database initialization
+![search_filter](images/search_filter.gif)
 
-* How to run the test suite
+- pagination
 
-* Services (job queues, cache servers, search engines, etc.)
+![pagination](images/pagination.gif)
 
-* Deployment instructions
 
-* ...
+### To run locally:
+- clone/download srepo
+- bundle install
+- npm install
+- run rails s
+- run npm start
