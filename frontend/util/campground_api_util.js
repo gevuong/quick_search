@@ -1,6 +1,5 @@
 export const fetchAllCampgrounds = () => (
-    $.ajax({
-        method: 'GET',
-        url: '/api/campgrounds',
-    })
+    axios.get('/api/campgrounds')
+        .then(res => res.data)
+        .catch(error => (console.log(error)))
 );
