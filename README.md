@@ -1,5 +1,8 @@
 # README
-A responsive (phone, tablet, desktop) web application that allows the user to quick filter a list of campgrounds. I used National Park Service's open public API to pull campground-related data. The top of the page has a search input field and below that, there are a list of campgrounds in response to the filter. The campgrounds are sorted alphabetically, are unique, and I removed any names with less than 3 characters.
+A responsive (phone, tablet, desktop) web application that allows the user to quick filter a list of campgrounds. I used National Park Service's open public API to pull campground-related data. The top of the page has a search input field and below that, there are a list of campgrounds in response to the filter. The campgrounds are sorted alphabetically, unique, and I removed any names with less than 3 characters.
+
+### Deployed to Heroku
+[Quick-Search Live](https://quick-search-filter.herokuapp.com/)
 
 ### For more info on the open public API.
 [API Documentation](https://www.nps.gov/subjects/developer/api-documentation.htm#/campgrounds/getCampgrounds)
@@ -8,9 +11,9 @@ Limit with API key is 1000 requests/hr.
 
 ### Primary technologies and libraries used
 - Ruby on Rails, jbuilder, HTTParty
-- PostgreSQL,
-- React w/ Redux, jQuery
-
+- PostgreSQL
+- React w/ Redux, Axios, React Spinner, CSS Transition Group
+- Heroku
 
 ### Features & Implementation
 - Ok, here's a step-by-step process of what happens when the page is loaded.
@@ -28,6 +31,7 @@ Limit with API key is 1000 requests/hr.
     9. The state is then mapped to props in the container, and is passed to the index component, thus rendering all the fetched campground names in a list.
     10. The app no longer needs to communicate with the backend, and the quick filter and pagination feature are all implemented on the frontend by manipulating the list of campgrounds received.
 
+
 ### Gifs of Web App
 
 - quick search filter
@@ -44,7 +48,7 @@ Limit with API key is 1000 requests/hr.
 
 
 ### To run locally:
-- clone/download repo
+- clone repo
 - bundle install
 - npm install
 - rails db:create, rails db:migrate
@@ -54,4 +58,4 @@ Limit with API key is 1000 requests/hr.
 
 
 ## Future Plans
-- deploy to heroku
+- Include a field for user to specify limit parameter in external API call.
