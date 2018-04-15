@@ -17,7 +17,7 @@ plugins = plugins.concat(
 )
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   context: __dirname,
   entry: "./frontend/quick_search",
   output: {
