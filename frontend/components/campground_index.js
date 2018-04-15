@@ -145,8 +145,20 @@ class ThingsIndex extends Component {
         let startPage = this.findStartAndEndPage(totalPages)[0];
         let endPage = this.findStartAndEndPage(totalPages)[1];
 
-        const slicedData = uniqSearchResults.slice(firstIndex, lastIndex);
+        let slicedData;
+        
+        // when user selects a single campground on pages other than the first page, selected campground will render beneath search bar.
+        if (uniqSearchResults.length === 1 && uniqSearchResults[0] !== "none") {
+        slicedData = [uniqSearchResults[0]];
+        }
+        else {
+        slicedData = uniqSearchResults.slice(firstIndex, lastIndex);
+        }
 
+        // const slicedData = uniqSearchResults.slice(firstIndex, lastIndex);
+        // console.log("uniqSearchResults: ", uniqSearchResults);
+        // console.log("firstIndex, lastIndex: ", firstIndex, lastIndex);
+        // console.log("slicedData: ", slicedData);
         return (
             <div>
 
