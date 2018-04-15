@@ -48,8 +48,9 @@ Limit with API key is 1000 requests/hr.
 - bundle install
 - npm install
 - rails db:create, rails db:migrate
-- run rails s
-- run npm start
+- rails s
+- npm start
+- localhost:3000
 
 
 ## Future Plans
