@@ -9,6 +9,8 @@ A responsive (phone, tablet, desktop) web application that allows the user to qu
 
 Limit with API key is 1000 requests/hr.
 
+Using the open public API documentation to fetch 50 campground results takes about 10-13sec.
+
 ### Primary technologies and libraries used
 - Ruby on Rails, jbuilder, HTTParty
 - PostgreSQL
