@@ -4,7 +4,7 @@ class Api::Fetch < ApplicationRecord
     #base_uri is a HTTParty class method
     base_uri('https://developer.nps.gov/api/v1')
 
-    def initialize(limit = 340, api_key = generate_random_api_key)
+    def initialize(limit = 50, api_key = generate_random_api_key)
         @options = {
             query: {
                 limit: limit,
