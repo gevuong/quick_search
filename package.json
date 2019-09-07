@@ -44,6 +44,6 @@
   "homepage": "https://github.com/gevuong/quick_search#readme",
   "devDependencies": {
     "redux-logger": "^3.0.6",
-    "webpack-cli": "^2.0.14"
+    "webpack-cli": "^3.3.8"
   }
 }
