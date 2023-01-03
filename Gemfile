@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'httparty', '~> 0.16.2'
+gem 'httparty', '~> 0.21.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
